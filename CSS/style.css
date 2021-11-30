@@ -1,0 +1,90 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Ubuntu';
+    background-image: linear-gradient(90deg, rgb(15, 101, 151), rgb(63, 75, 189));
+    color:rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+} 
+.container{
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 50px 40px;
+    border-radius: 10px;
+}
+.container h1{
+    text-align: center;
+    margin-bottom: 30px;
+}
+.container a {
+    text-decoration: none;
+    color: rgb(188, 198, 206);
+}
+.form-control{
+    position: relative;
+    margin:  20px 0 40px;
+    width: 300px;
+
+}
+.form-control input{
+    background-color: transparent;
+    border: 0;
+    border-bottom: 2px rgb(255, 255, 255) solid;
+    display: block;
+    width: 100%;
+    padding: 15px 0;
+    font-size: 18px;
+    color:rgb(255, 255, 255)
+}
+.form-control input:focus,
+.form-control input:valid{
+    outline: 0; 
+    border-bottom-color: rgb(133, 211, 235) ;
+}
+.btn{
+    cursor: pointer;
+    display: inline-block;
+    width: 100%;
+    background: linear-gradient(180deg, rgb(36, 142, 204), rgb(104, 116, 223));
+    color: rgb(255, 255, 255);
+    padding: 20px;
+    font-family: inherit;
+    border: 0;
+    border-radius: 10px;
+    font-size: 20px;
+}
+.btn:focus{
+    outline: 0;
+}
+.btn:active{
+    transform: scale(0.98);
+}
+.no-acc{
+    margin-top: 30px;
+}
+
+.form-control label{
+    position: absolute;
+    top: 15px;
+    left: 0; 
+    z-index: -1;
+}
+.form-control label span{
+    display: inline-block;
+    font-size: 20px;
+    min-width: 5px;
+    transition: 0.3s cubic-bezier(0.7, -0.6, 0.3, 1.5);
+    
+}
+.form-control input:focus + label span,
+.form-control input:valid + label span{
+    color: rgb(133, 211, 235);
+    transform: translateY(-30px);
+}
